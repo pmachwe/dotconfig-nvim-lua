@@ -5,7 +5,7 @@ lua require('cmp').setup.buffer { enabled = false }
 
 setlocal noswf bh=unload
 setlocal ul=-1
-setlocal syntax off
+setlocal syntax=off
 set noincsearch
 
 augroup MyNvimCmp
