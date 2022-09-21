@@ -14,15 +14,15 @@ set completeopt=menuone,menu,longest
 nnoremap <buffer> <F4> :call UpdateTags()
 nnoremap <buffer> <F5> :make<CR>
 
-nnoremap <buffer> <leader>cs :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>cg :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>cd :call cscope#cscope#Cscope("d", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>cc :call cscope#cscope#Cscope("c", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>ct :call cscope#cscope#Cscope("t", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>ce :call cscope#cscope#Cscope("e", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>cf :call cscope#cscope#Cscope("f", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>ci :call cscope#cscope#Cscope("i", "<C-R><C-W>")<CR>
-nnoremap <buffer> <leader>ca :call cscope#cscope#Cscope("a", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>cs :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>cg :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>cd :call cscope#cscope#Cscope("d", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>cc :call cscope#cscope#Cscope("c", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>ct :call cscope#cscope#Cscope("t", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>ce :call cscope#cscope#Cscope("e", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>cf :call cscope#cscope#Cscope("f", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>ci :call cscope#cscope#Cscope("i", "<C-R><C-W>")<CR>
+" nnoremap <buffer> <leader>ca :call cscope#cscope#Cscope("a", "<C-R><C-W>")<CR>
 
 nnoremap <buffer> <Leader>cG :CscopeFindGlobal<SPACE>
 nnoremap <buffer> <Leader>cC :CscopeFindCallers<SPACE>
@@ -44,9 +44,9 @@ nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
 " command! -bang -nargs=* CscopeFindTextString    call cscope#cscope#Cscope("t", <q-args>)
 
 if filereadable(expand('~/.work_machine'))
-  nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
-  nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
-  nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
+  " nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
+  " nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
+  " nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
   " Disable diagnostics with lsp
   " https://github.com/neovim/nvim-lspconfig/issues/662
   lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
