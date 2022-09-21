@@ -11,9 +11,10 @@ require('user.plugins.lualine')
 require('user.mappings')
 require('user.telescope')
 require('user.telescope.mappings')
+require('user.functions')
 
 -- Set theme
-vim.cmd("colorscheme nordfox")
+set_theme()
 
 -- Some local configuration
 vim.cmd("runtime local.vim")
