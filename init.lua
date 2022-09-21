@@ -14,3 +14,7 @@ require('user.telescope.mappings')
 
 -- Set theme
 vim.cmd("colorscheme nordfox")
+
+-- Some local configuration
+vim.cmd("runtime local.vim")
+vim.cmd("runtime local.lua")
