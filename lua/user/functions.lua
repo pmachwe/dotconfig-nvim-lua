@@ -1,7 +1,9 @@
 -- Set theme based on env variable
 -- to light/dark versions
 
-set_theme = function()
+local M = {}
+
+M.set_theme = function()
     local cs
     if (os.getenv("MY_BACKGROUND") == "dark") then
         cs = "nordfox"
@@ -13,3 +15,5 @@ set_theme = function()
 
     vim.cmd("colorscheme " .. cs)
 end
+
+return M
