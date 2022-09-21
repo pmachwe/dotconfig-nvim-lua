@@ -8,7 +8,7 @@ end
 
 require('lualine').setup {
   options = {theme = 'auto'},
-  extensions = {'quickfix', 'fzf', 'nerdtree'},
+  -- extensions = {'quickfix', 'fzf', 'nerdtree'},
   sections = {
     lualine_c = {'filename', GetCurrFunc},
     lualine_x = {GetP4Client, 'fileformat', 'filetype'}
