@@ -11,8 +11,6 @@ M.set_theme = function()
         cs = "dawnfox"
     end
 
-    print(vim.inspect("Setting colorscheme to " .. cs))
-
     vim.cmd("colorscheme " .. cs)
 end
 
