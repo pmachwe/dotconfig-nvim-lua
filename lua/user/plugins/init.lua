@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   use 'ngemily/vim-vp4'
   use 'christoomey/vim-tmux-navigator'
   use 'voldikss/vim-floaterm'
+  use 'ethanholz/nvim-lastplace'
 
   use {
     'nmac427/guess-indent.nvim',
