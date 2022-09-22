@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
   -- Experiments
   use 'norcalli/nvim-terminal.lua'
   use 'camgraff/telescope-tmux.nvim'
+  use 'RRethy/vim-illuminate'
   use {
     "AckslD/nvim-neoclip.lua",
     config = function() require('neoclip').setup() end,
