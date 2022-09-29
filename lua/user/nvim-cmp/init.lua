@@ -1,4 +1,4 @@
-vim.api.nvim_set_option("completeopt", "menu,menuone,noselect")
+vim.api.nvim_set_option("completeopt", "menu,menuone,noselect,longest")
 
 local cmp = require('cmp')
 local cmp_buffer = require('cmp_buffer')
