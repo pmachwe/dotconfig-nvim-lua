@@ -7,6 +7,8 @@ vim.g.mapleader = ','
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', opts)
 vim.api.nvim_set_keymap('n', '<Leader>w', ':update<CR>', opts)
 vim.api.nvim_set_keymap('i', '<Leader>w', '<Esc>:update<CR>', opts)
+vim.api.nvim_set_keymap('i', '<Leader>z', '<Esc>', opts)
+vim.api.nvim_set_keymap('n', '<Leader><Leader>s', ':source %<CR>', opts)
 
 vim.api.nvim_set_keymap('n', '<Leader>.', ':b#<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Leader>k', ':bd<CR>', opts)
