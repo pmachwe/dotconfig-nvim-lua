@@ -28,7 +28,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   }, {
-    { name = 'buffer' },
+    { name = 'buffer', keyword_length = 5},
     { name = 'tags' },
   }),
   sorting = {
@@ -36,6 +36,10 @@ cmp.setup({
       function(...) return cmp_buffer:compare_locality(...) end,
       -- The rest of your comparators...
     }
+  },
+  experimental = {
+    native_menu = false,
+    ghost_text = true
   }
 })
 
