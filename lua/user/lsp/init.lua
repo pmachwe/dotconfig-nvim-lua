@@ -40,6 +40,9 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+
+  -- Enable signature
+  require "lsp_signature".on_attach(signature_setup, bufnr)
 end
 
 local lsp_flags = {
