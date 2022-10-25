@@ -4,6 +4,10 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use {
+    'glepnir/lspsaga.nvim',
+    branch = 'main',
+  }
 
   -- Treesitter
   use {
@@ -38,6 +42,7 @@ return require('packer').startup(function(use)
 
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
+  use "overcache/NeoSolarized"
 
   -- Status line
   use 'hoob3rt/lualine.nvim'
