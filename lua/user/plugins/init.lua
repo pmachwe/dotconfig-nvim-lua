@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
   -- General utilities
   use 'ggandor/leap.nvim' -- sneak movement
   use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-commentary'
+  -- use 'tpope/vim-commentary'
   use 'machakann/vim-highlightedyank'
   use 'tpope/vim-dispatch'
   use 'junegunn/vim-peekaboo'
@@ -62,6 +62,13 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'voldikss/vim-floaterm'
   use 'ethanholz/nvim-lastplace'
+  -- context-aware commenting
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   use {
     'nmac427/guess-indent.nvim',
