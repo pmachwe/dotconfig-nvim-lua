@@ -75,6 +75,8 @@ return require('packer').startup(function(use)
     config = function() require('guess-indent').setup {} end,
   }
 
+  use 'tpope/vim-scriptease' -- :Message
+
   -- Experiments
   use 'norcalli/nvim-terminal.lua'
   use 'camgraff/telescope-tmux.nvim'
