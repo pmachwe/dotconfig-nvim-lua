@@ -10,3 +10,16 @@ require'nvim-lastplace'.setup {
 
 -- Setup comment.nvim
 require('Comment').setup()
+
+-- Setup bufferline
+vim.opt.termguicolors = true
+require("bufferline").setup{}
+
+-- Setup express_line
+require('el').setup {
+  -- An example generator can be seen in `Setup`.
+  -- A default one is supplied if you do not want to customize it.
+  -- generator = function(win_id)
+  --   ...
+  -- end
+}

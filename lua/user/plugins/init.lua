@@ -96,4 +96,12 @@ return require('packer').startup(function(use)
       end
   }
 
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
+
+  use 'tjdevries/express_line.nvim'
+
 end)
