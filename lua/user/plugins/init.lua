@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
   use 'preservim/tagbar'
   use 'ngemily/vim-vp4'
   use 'christoomey/vim-tmux-navigator'
-  use 'voldikss/vim-floaterm'
+  -- use 'voldikss/vim-floaterm'
   use 'ethanholz/nvim-lastplace'
   -- context-aware commenting
   use {
@@ -107,5 +107,13 @@ return require('packer').startup(function(use)
   }
 
   use 'tjdevries/express_line.nvim'
+
+  -- Upgrading to this from floaterm
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = '*', config = function()
+      require("toggleterm").setup()
+    end
+  }
 
 end)

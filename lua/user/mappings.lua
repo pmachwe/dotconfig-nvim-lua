@@ -53,7 +53,7 @@ vim.api.nvim_set_keymap('n', '<leader>qh', ':chistory<CR>', opts)
 vim.api.nvim_set_keymap('n', '<c-n>', ':cnext<CR>', opts)
 vim.api.nvim_set_keymap('n', '<c-p>', ':cprevious<CR>', opts)
 
--- Floaterm
-vim.api.nvim_set_keymap('n', '\\t', ':FloatermToggle<CR>', opts)
-vim.api.nvim_set_keymap('t', '<C-\\><C-n>\\t', ':FloatermToggle<CR>', opts)
+-- ToggleTerm
+vim.api.nvim_set_keymap('n', '\\t', ':ToggleTerm<CR>', opts)
+vim.api.nvim_set_keymap('t', '<C-\\><C-n>\\t', ':ToggleTerm<CR>', opts)
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', opts)
