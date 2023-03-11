@@ -6,7 +6,7 @@ local M = {}
 M.set_theme = function()
     local cs
     if (os.getenv("MY_BACKGROUND") == "dark") then
-        cs = "nordfox"
+        cs = "nightfly"
     else
         cs = "dawnfox"
     end

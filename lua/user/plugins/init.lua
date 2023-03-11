@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
   use "overcache/NeoSolarized"
+  use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
   -- Status line
   use 'hoob3rt/lualine.nvim'

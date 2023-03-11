@@ -50,15 +50,17 @@ cmp.setup({
       end,
     },
   },
-  sources = cmp.config.sources({
-    { name = 'treesitter' },
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'vim_lsp' },
-    { name = 'nvim_lua' }
-  }, {
-    { name = 'buffer', keyword_length = 5},
-    { name = 'tags' },
+  sources = cmp.config.sources(
+  {
+    { name = 'buffer', keyword_length = 4, max_item_count=4},
+    { name = 'tags', keyword_length=4, max_item_count=4 },
+  },
+  {
+    { name = 'treesitter', keyword_length=4, max_item_count=4  },
+    { name = 'nvim_lsp', keyword_length=4},
+    { name = 'luasnip', keyword_length=4, max_item_count=4 },
+    { name = 'vim_lsp', keyword_length=4, max_item_count=4 },
+    { name = 'nvim_lua', keyword_length=4, max_item_count=4 }
   }),
   sorting = {
     comparators = {
