@@ -1,96 +1,111 @@
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
+return require('lazy').setup({
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use {
+  'neovim/nvim-lspconfig',
+  {
     'glepnir/lspsaga.nvim',
     branch = 'main',
-  }
-  use 'ray-x/lsp_signature.nvim'
+  },
+  'ray-x/lsp_signature.nvim',
 
   -- Treesitter
-  use {
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-  use 'nvim-treesitter/nvim-treesitter-context'
-  use 'p00f/nvim-ts-rainbow'
+    build = ':TSUpdate'
+  },
+  'nvim-treesitter/nvim-treesitter-context',
+  'p00f/nvim-ts-rainbow',
 
   -- Fuzzy finder
-  use {
+  {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
 
   -- Faster fuzzy impl in C
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   -- P4 files
-  use { 'Badhi/vim-p4-files' }
+  { 'Badhi/vim-p4-files' },
 
   -- Autocomplete
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'quangnguyen30192/cmp-nvim-tags'
-  use 'ray-x/cmp-treesitter'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'prabirshrestha/vim-lsp'
-  use 'dmitmel/cmp-vim-lsp'
-  use 'hrsh7th/nvim-cmp'
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'quangnguyen30192/cmp-nvim-tags',
+  'ray-x/cmp-treesitter',
+  'hrsh7th/cmp-nvim-lua',
+  'prabirshrestha/vim-lsp',
+  'dmitmel/cmp-vim-lsp',
+  'hrsh7th/nvim-cmp',
 
   -- For luasnip users.
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  'L3MON4D3/LuaSnip',
+  'saadparwaiz1/cmp_luasnip',
 
   -- Colorscheme
-  use "EdenEast/nightfox.nvim"
-  use "overcache/NeoSolarized"
-  use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+  'EdenEast/nightfox.nvim',
+  'overcache/NeoSolarized',
+  { 'bluz71/vim-nightfly-colors', as = "nightfly" },
+  'nordtheme/vim',
 
   -- Status line
-  use 'hoob3rt/lualine.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'ryanoasis/vim-devicons'
+  'hoob3rt/lualine.nvim',
+  'kyazdani42/nvim-web-devicons',
+  'ryanoasis/vim-devicons',
 
   -- General utilities
-  use 'ggandor/leap.nvim' -- sneak movement
-  use 'jiangmiao/auto-pairs'
-  -- use 'tpope/vim-commentary'
-  use 'machakann/vim-highlightedyank'
-  use 'tpope/vim-dispatch'
-  use 'junegunn/vim-peekaboo'
-  use 'preservim/tagbar'
-  use 'ngemily/vim-vp4'
-  use 'christoomey/vim-tmux-navigator'
-  -- use 'voldikss/vim-floaterm'
-  use 'ethanholz/nvim-lastplace'
+  'ggandor/leap.nvim', -- sneak movement
+  'jiangmiao/auto-pairs',
+  -- 'tpope/vim-commentary',
+  'machakann/vim-highlightedyank',
+  'tpope/vim-dispatch',
+  'junegunn/vim-peekaboo',
+  'preservim/tagbar',
+  'ngemily/vim-vp4',
+  'christoomey/vim-tmux-navigator',
+  -- 'voldikss/vim-floaterm',
+  'ethanholz/nvim-lastplace',
   -- context-aware commenting
-  use {
+  {
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
     end
-  }
+  },
 
-  use {
+  {
     'nmac427/guess-indent.nvim',
     config = function() require('guess-indent').setup {} end,
-  }
+  },
 
-  use 'tpope/vim-scriptease' -- :Message
+  'tpope/vim-scriptease', -- :Message
 
   -- Experiments
-  use 'norcalli/nvim-terminal.lua'
-  use 'camgraff/telescope-tmux.nvim'
-  use 'RRethy/vim-illuminate'
-  use {
+  'norcalli/nvim-terminal.lua',
+  'camgraff/telescope-tmux.nvim',
+  'RRethy/vim-illuminate',
+  {
     "AckslD/nvim-neoclip.lua",
     config = function() require('neoclip').setup() end,
-  }
-  use {
+  },
+  {
       "folke/which-key.nvim",
       config = function()
           require("which-key").setup {
@@ -99,22 +114,22 @@ return require('packer').startup(function(use)
               -- refer to the configuration section below
           }
       end
-  }
+  },
 
-  use {
+  {
     'akinsho/bufferline.nvim',
     tag = "v3.*",
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
+    dependencies = 'kyazdani42/nvim-web-devicons'
+  },
 
-  use 'tjdevries/express_line.nvim'
+  'tjdevries/express_line.nvim',
 
   -- Upgrading to this from floaterm
-  use {
+  {
     "akinsho/toggleterm.nvim",
     tag = '*', config = function()
       require("toggleterm").setup()
     end
-  }
+  },
 
-end)
+})
