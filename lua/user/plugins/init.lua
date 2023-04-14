@@ -106,20 +106,24 @@ return require('lazy').setup({
     config = function() require('neoclip').setup() end,
   },
   {
-      "folke/which-key.nvim",
-      config = function()
-          require("which-key").setup {
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
-          }
-      end
+    'folke/which-key.nvim',
+    config = function()
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
   },
 
   {
     'akinsho/bufferline.nvim',
     tag = "v3.*",
-    dependencies = 'kyazdani42/nvim-web-devicons'
+    dependencies = 'kyazdani42/nvim-web-devicons',
+    config = function ()
+      vim.opt.termguicolors = true
+      require("bufferline").setup{}
+    end
   },
 
   'tjdevries/express_line.nvim',
