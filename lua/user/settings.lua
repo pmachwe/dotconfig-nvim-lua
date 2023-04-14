@@ -28,3 +28,6 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.inccommand = 'split'
 
 -- vim.o.path:append('**')
+
+vim.o.grepprg = "rg --vimgrep"
+vim.o.grepformat = "%f:%l:%c:%m"
