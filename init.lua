@@ -28,8 +28,8 @@ require('user.lsp.lspsaga')
 -- require('user.treesitter.rainbow')
 -- require('user.plugins.lualine')
 require('user.mappings')
-require('user.telescope')
-require('user.telescope.mappings')
+-- require('user.telescope')
+-- require('user.telescope.mappings')
 
 -- Set theme
 require('user.functions').set_theme()

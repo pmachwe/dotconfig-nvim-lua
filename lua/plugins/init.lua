@@ -8,17 +8,6 @@ return {
   },
   'ray-x/lsp_signature.nvim',
 
-  -- Fuzzy finder
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-  },
-
-  -- Faster fuzzy impl in C
-  {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  -- P4 files
-  { 'Badhi/vim-p4-files' },
-
   -- Autocomplete
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
@@ -91,10 +80,6 @@ return {
   'norcalli/nvim-terminal.lua',
   'camgraff/telescope-tmux.nvim',
   'RRethy/vim-illuminate',
-  {
-    "AckslD/nvim-neoclip.lua",
-    config = function() require('neoclip').setup() end,
-  },
   {
       "folke/which-key.nvim",
       config = function()
