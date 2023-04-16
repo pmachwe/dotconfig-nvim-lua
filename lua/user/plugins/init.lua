@@ -78,7 +78,7 @@ return require('lazy').setup({
   'tpope/vim-dispatch',
   'junegunn/vim-peekaboo',
   'preservim/tagbar',
-  'ngemily/vim-vp4',
+
   'christoomey/vim-tmux-navigator',
   -- 'voldikss/vim-floaterm',
   'ethanholz/nvim-lastplace',
