@@ -3,12 +3,23 @@
 
 local M = {}
 
+
 M.set_theme = function()
     local cs
-    if (os.getenv("MY_BACKGROUND") == "dark") then
-        cs = "nordfox"
-    else
-        cs = "dawnfox"
+    local fpath = os.getenv("HOME") .. "/.background"
+    local f = io.open(fpath)
+
+    if not f then
+        cs = "dayfox"
+        return
+    end
+
+    for line in f:lines() do
+        if line == "dark" then
+            cs = "nordfox"
+        else
+            cs = "dawnfox"
+        end
     end
 
     vim.cmd("colorscheme " .. cs)
