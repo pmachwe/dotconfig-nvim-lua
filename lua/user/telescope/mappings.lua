@@ -6,7 +6,6 @@ vim.api.nvim_set_keymap('n', "<leader>g", "<cmd>lua require('telescope.builtin')
 vim.api.nvim_set_keymap('n', "<leader>l", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>t", "<cmd>lua require('telescope.builtin').treesitter()<CR>", opts)
 
 -- Find files in current directory
 vim.api.nvim_set_keymap('n', '<Leader>fe', "<cmd>lua require('telescope.builtin').find_files({cwd = vim.fn.expand('%:p:h')})<CR>", opts)

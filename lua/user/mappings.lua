@@ -24,6 +24,17 @@ vim.api.nvim_set_keymap('', '<A-k>', '<C-w>k', opts)
 vim.api.nvim_set_keymap('', '<A-j>', '<C-w>j', opts)
 vim.api.nvim_set_keymap('', '<A-h>', '<C-w>h', opts)
 
+-- Perforce
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pp", ":Vp4", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pe", ":Vp4Edit<CR>", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pa", ":Vp4Add<CR>", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pr", ":Vp4Revert<CR>", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pd", ":Vp4Describe ", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pc", ":Vp4Change", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>pi", ":Vp4Info<CR>", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>po", ":Vp4 opened<CR>", opts)
+vim.api.nvim_set_keymap('n', "<buffer> <localleader>ps", ":Vp4 sync<CR>", opts)
+
 -- Tmux Navigator
 vim.api.nvim_set_keymap('n', '<A-h>', ':TmuxNavigateLeft<CR>', opts)
 vim.api.nvim_set_keymap('n', '<A-j>', ':TmuxNavigateDown<CR>', opts)
