@@ -6,7 +6,7 @@ vim.api.nvim_set_keymap("n", "<leader>:", "<cmd>Telescope command_history<cr>", 
 -- find
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {noremap = true, silent = true, desc = "Buffers"})
 vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {noremap = true, silent = true, desc = "Find Files (root dir)"})
-vim.api.nvim_set_keymap("n", "<leader>fe", "<cmd>lua require('telescope.builtin').find_files({cwd = vim.fn.expand('%:p:h')))<cr>", {noremap = true, silent = true, desc = "Find Files (cwd)"})
+vim.api.nvim_set_keymap("n", "<leader>fe", "<cmd>Telescope find_files cwd=%:p:h<cr>", {noremap = true, silent = true, desc = "Find Files (cwd)"})
 vim.api.nvim_set_keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", {noremap = true, silent = true, desc = "Recent"})
 vim.api.nvim_set_keymap("n", '<Leader>fi', "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", {noremap = true, silent = true, desc = "Find Files Nvim Config"})
 -- git
