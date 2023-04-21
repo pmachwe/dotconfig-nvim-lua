@@ -6,9 +6,9 @@ local M = {}
 M.set_theme = function()
     local cs
     if (os.getenv("MY_BACKGROUND") == "dark") then
-        cs = "nightfly"
+        cs = "nordfox"
     else
-        cs = "dawnfox"
+        cs = "dayfox"
     end
 
     vim.cmd("colorscheme " .. cs)
