@@ -115,6 +115,8 @@ return require('packer').startup(function(use)
     tag = '*', config = function()
       require("toggleterm").setup()
     end
-  }
+  },
+
+  use 'tpope/vim-fugitive'
 
 end)
