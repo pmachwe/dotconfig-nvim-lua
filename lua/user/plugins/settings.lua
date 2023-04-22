@@ -39,7 +39,7 @@ require("noice").setup({
     },
 
     messages = {
-        enabled = true,
+        enabled = false,
     },
 
     notify = {
