@@ -23,3 +23,7 @@ require('el').setup {
   --   ...
   -- end
 }
+
+-- Setup gitsigns
+require('gitsigns').setup()
+
