@@ -57,3 +57,6 @@ vim.api.nvim_set_keymap('n', '<c-p>', ':cprevious<CR>', opts)
 vim.api.nvim_set_keymap('n', '\\t', ':ToggleTerm<CR>', opts)
 vim.api.nvim_set_keymap('t', '<C-\\><C-n>\\t', ':ToggleTerm<CR>', opts)
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', opts)
+
+-- Git
+vim.api.nvim_set_keymap('n', '<Leader>G', ':Git<CR>', opts)
