@@ -142,4 +142,8 @@ return require('packer').startup(function(use)
       "rcarriga/nvim-notify",
     }
   })
+
+  -- Run code from within nvim
+  use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+
 end)

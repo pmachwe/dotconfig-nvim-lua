@@ -60,3 +60,8 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', opts)
 
 -- Git
 vim.api.nvim_set_keymap('n', '<Leader>G', ':Git<CR>', opts)
+
+-- Code runner
+vim.api.nvim_set_keymap('n', '<Leader>R', ':RunCode<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Leader>Rq', ':RunClose<CR>', opts)
+
