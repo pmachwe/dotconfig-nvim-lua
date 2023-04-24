@@ -45,6 +45,14 @@ require("noice").setup({
     notify = {
         enabled = false,
     },
+
+    lsp = {
+        signature = false,
+    },
+})
+
+require("notify").setup({
+  background_colour = "#000000",
 })
 
 -- Code runner
