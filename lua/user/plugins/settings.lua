@@ -47,7 +47,18 @@ require("noice").setup({
     },
 
     lsp = {
-        signature = false,
+        signature = {
+            enabled = false,
+        },
+        hover = {
+            enabled = false,
+        },
+        progress = {
+            enabled = false,
+        },
+        message = {
+            enabled = false,
+        },
     },
 })
 
