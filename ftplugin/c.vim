@@ -24,14 +24,16 @@ nnoremap <buffer> <F5> :make<CR>
 " nnoremap <buffer> <leader>ci :call cscope#cscope#Cscope("i", "<C-R><C-W>")<CR>
 " nnoremap <buffer> <leader>ca :call cscope#cscope#Cscope("a", "<C-R><C-W>")<CR>
 
-nnoremap <buffer> <Leader>cG :CscopeFindGlobal<SPACE>
-nnoremap <buffer> <Leader>cC :CscopeFindCallers<SPACE>
-nnoremap <buffer> <Leader>cF :CscopeFindFile<SPACE>
-nnoremap <buffer> <Leader>cT :CscopeFindTextString<SPACE>
-nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
+if has("cscope")
+  nnoremap <buffer> <Leader>cG :CscopeFindGlobal<SPACE>
+  nnoremap <buffer> <Leader>cC :CscopeFindCallers<SPACE>
+  nnoremap <buffer> <Leader>cF :CscopeFindFile<SPACE>
+  nnoremap <buffer> <Leader>cT :CscopeFindTextString<SPACE>
+  nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
 
-" Use QuickFix window  for cscope
-:set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+  " Use QuickFix window  for cscope
+  :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+endif
 
 " command! -bang -nargs=* CscopeFindAssignments   call cscope#cscope#Cscope("a", <q-args>)
 " command! -bang -nargs=* CscopeFindCallers       call cscope#cscope#Cscope("c", <q-args>)
