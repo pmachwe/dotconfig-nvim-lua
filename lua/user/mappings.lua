@@ -65,3 +65,5 @@ vim.api.nvim_set_keymap('n', '<Leader>G', ':Git<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Leader>R', ':RunCode<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Leader>Rq', ':RunClose<CR>', opts)
 
+-- Make
+vim.api.nvim_set_keymap('n', '<Leader>m', ':Make<CR>', opts)
