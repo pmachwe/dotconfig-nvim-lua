@@ -1,6 +1,12 @@
 compiler gcc
 setlocal makeprg=g++\ --std=c++17\ -o\ %:r\ %
 
+iab uns unsigned
+iab umap std::unordered_map<><left>
+iab uset std::unordered_set<><left>
+iab vec std::vector<><left>
+iab ivec std::vector<int>
+
 " Taken from https://aufather.wordpress.com/2010/08/26/omni-completion-in-vim/
 set omnifunc=syntaxcomplete#Complete " override built-in C omnicomplete with C++ OmniCppComplete plugin
 let OmniCpp_GlobalScopeSearch   = 1
